@@ -32,7 +32,7 @@ public class CheckoutTest {
         ShoppingCart.proceedToCheckoutInShipping();
         ShoppingCart.clickPayByCheck();
         ShoppingCart.clickConfirmOrder();
-        Assert.assertTrue(ShoppingCart.isOrderSuccessDisplayed(), "Shopping Cart is not success");
+        ShoppingCart.isOrderSuccessDisplayed();
     }
 
     @AfterClass(alwaysRun = true)
