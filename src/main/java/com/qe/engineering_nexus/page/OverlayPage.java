@@ -14,6 +14,8 @@ public class OverlayPage extends LoginPage {
 
     public void clickContinueShopping(){
         syscoLabUI.sleep(4);
+        syscoLabUI.scrollToElement(btnContinueShopping);
+        syscoLabUI.sleep(4);
         syscoLabUI.click(btnContinueShopping);
     }
 

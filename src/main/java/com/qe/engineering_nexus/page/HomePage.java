@@ -25,6 +25,6 @@ public class HomePage extends LoginPage {
         syscoLabUI.sleep(5);
         syscoLabUI.mouseHover(productElement);
         syscoLabUI.sleep(2);
-        syscoLabUI.click(productElement);
+        syscoLabUI.clickWithJavascript(productElement);
     }
 }

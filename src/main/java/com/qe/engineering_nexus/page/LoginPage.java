@@ -26,8 +26,9 @@ public class LoginPage {
         }else {
             DriverEnvironmentSetUpUtil.setToRunLocallyWeb();
             syscoLabUI = new SyscoLabWUI(null);
+            syscoLabUI.driver.manage().window().fullscreen();
         }
-        syscoLabUI.driver.manage().window().fullscreen();
+
         syscoLabUI.navigateTo(url);
         syscoLabUI.sleep(5);
     }
@@ -38,13 +39,17 @@ public class LoginPage {
     }
 
     public void setUsername(String username){
-        syscoLabUI.waitTillElementLoaded(txtUsername);
-        syscoLabUI.sendKeys(txtUsername, username);
+//        syscoLabUI.waitTillElementLoaded(txtUsername);
+        syscoLabUI.scrollToElement(txtUsername);
+        syscoLabUI.sleep(2);
+        syscoLabUI.sendKeysInScript(txtUsername, username);
         syscoLabUI.sleep(5);
     }
 
     public void setPassword(String password){
-        syscoLabUI.sendKeys(txtPassword, password);
+        syscoLabUI.scrollToElement(txtPassword);
+        syscoLabUI.sleep(2);
+        syscoLabUI.sendKeysInScript(txtPassword, password);
         syscoLabUI.sleep(5);
     }
 

@@ -5,7 +5,7 @@ public class Constants {
     public static final String TEST_ENV = System.getProperty("test.env", "QA");
     public static final String TEST_RELEASE = System.getProperty("test.release", "Sygma_UI_v1.0");
     public static final String TEST_PROJECT = System.getProperty("test.project", "Sygma");
-    public static final boolean RUN_MOBILE = Boolean.parseBoolean(System.getProperty("run.mobile", "false"));
+    public static final boolean RUN_MOBILE = Boolean.parseBoolean(System.getProperty("run.mobile", "true"));
     public static final boolean RUN_WINDOWS = Boolean.parseBoolean(System.getProperty("run.windows", "false"));
 
     public static final String APP_URL = System.getProperty("app.url", "http://automationpractice.com");

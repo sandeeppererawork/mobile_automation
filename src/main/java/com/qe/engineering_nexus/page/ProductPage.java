@@ -14,6 +14,8 @@ public class ProductPage extends LoginPage {
 
     public void clickAddToCart(){
 //        switchToProductIframe();
+        syscoLabUI.scrollToElement(btnAddToCart);
+        syscoLabUI.sleep(3);
         syscoLabUI.click(btnAddToCart);
         syscoLabUI.sleep(3);
 //        syscoLabUI.switchToDefaultFrame();
