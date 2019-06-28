@@ -19,6 +19,7 @@ public class Login {
         loginPage.setPassword(loginData.password);
         loginPage.clickLoginButton();
         headerNavigationPage.clickMainLogo();
+        loginPage.getPageTitle();
     }
 
     public static void quitDriver(){

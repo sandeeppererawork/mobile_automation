@@ -24,8 +24,8 @@ public class LoginPage {
             DesiredCapabilities desiredCapabilities = DriverEnvironmentSetUpUtil.setToRunLocally();
             syscoLabUI = new SyscoLabMUI(desiredCapabilities);
         }else {
-            DriverEnvironmentSetUpUtil.setToRunLocallyWeb();
-            syscoLabUI = new SyscoLabWUI(null);
+//            DriverEnvironmentSetUpUtil.setToRunLocallyWeb();
+            syscoLabUI = new SyscoLabWUI(DriverEnvironmentSetUpUtil.setToRunRemotely());
             syscoLabUI.driver.manage().window().fullscreen();
         }
 
@@ -61,5 +61,9 @@ public class LoginPage {
     public void quitDriver(){
         if (syscoLabUI.driver != null)
             syscoLabUI.quit();
+    }
+
+    public void getPageTitle(){
+        System.out.println(syscoLabUI.getTitle());
     }
 }

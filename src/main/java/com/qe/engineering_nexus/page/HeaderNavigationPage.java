@@ -12,6 +12,7 @@ public class HeaderNavigationPage extends LoginPage{
         syscoLabUI.sleep(5);
         syscoLabUI.click(imgMainLogo);
         syscoLabUI.sleep(2);
+        getPageTitle();
     }
 
 }

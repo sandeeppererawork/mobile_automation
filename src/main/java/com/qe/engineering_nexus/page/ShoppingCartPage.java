@@ -17,6 +17,7 @@ public class ShoppingCartPage extends LoginPage{
         syscoLabUI.sleep(3);
         syscoLabUI.click(btnProceedToCheckoutInSummary);
         syscoLabUI.sleep(3);
+        getPageTitle();
     }
 
     public void clickProceedToCheckoutAddress(){
@@ -24,6 +25,7 @@ public class ShoppingCartPage extends LoginPage{
         syscoLabUI.sleep(3);
         syscoLabUI.click(btnProceedToCheckoutInAddress);
         syscoLabUI.sleep(3);
+        getPageTitle();
     }
 
     public void clickProceedToCheckoutShipping(){
@@ -31,25 +33,30 @@ public class ShoppingCartPage extends LoginPage{
         syscoLabUI.sleep(3);
         syscoLabUI.click(btnProceedToCheckoutInShipping);
         syscoLabUI.sleep(3);
+        getPageTitle();
     }
 
     public void checkTerms(){
         syscoLabUI.click(chkTerms);
         syscoLabUI.sleep(3);
+        getPageTitle();
     }
 
     public void clickPayByCheck(){
         syscoLabUI.click(btnPayByCheck);
         syscoLabUI.sleep(3);
+        getPageTitle();
     }
 
     public void clickConfirmMyOrder(){
         syscoLabUI.click(btnConfirmMyOrder);
         syscoLabUI.sleep(3);
+        getPageTitle();
     }
 
     public boolean isOrderSuccessDisplayed(){
         syscoLabUI.sleep(3);
+        getPageTitle();
         return syscoLabUI.isDisplayed(lblOrderSuccess);
     }
 }

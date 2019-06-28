@@ -17,11 +17,13 @@ public class OverlayPage extends LoginPage {
         syscoLabUI.scrollToElement(btnContinueShopping);
         syscoLabUI.sleep(4);
         syscoLabUI.click(btnContinueShopping);
+        getPageTitle();
     }
 
     public void clickProceedToCheckout(){
         syscoLabUI.sleep(4);
         syscoLabUI.click(btnProceedToCheckout);
+        getPageTitle();
     }
 
     public void clickCloseButton(){

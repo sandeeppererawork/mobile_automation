@@ -19,6 +19,7 @@ public class ProductPage extends LoginPage {
         syscoLabUI.click(btnAddToCart);
         syscoLabUI.sleep(3);
 //        syscoLabUI.switchToDefaultFrame();
+        getPageTitle();
     }
 
 

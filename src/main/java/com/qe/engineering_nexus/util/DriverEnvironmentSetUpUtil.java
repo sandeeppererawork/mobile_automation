@@ -5,6 +5,7 @@ import com.qe.engineering_nexus.common.Constants;
 import com.syscolab.qe.core.ui.SyscoLabCapabilityUtil;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -41,10 +42,17 @@ public class DriverEnvironmentSetUpUtil {
     }
 
     public static Capabilities setToRunRemotely() {
+        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.setHeadless(true);
+//        chromeOptions.addArguments("--headless");
+//        chromeOptions.addArguments("--no-sandbox");
+//        chromeOptions.addArguments("--disable-dev-shm-usage");
+
         DesiredCapabilities capabilities ;
-        System.setProperty("hub.url","http://localhost:4444/wd/hub");
-        capabilities = SyscoLabCapabilityUtil.getPCCapabilities("MAC","chrome");
+        capabilities = SyscoLabCapabilityUtil.getPCCapabilities(Constants.NODE_PLATFORM,"chrome");
         capabilities.setBrowserName(BrowserType.CHROME);
+        capabilities.setCapability("hub.url",Constants.HUB_URL);
+        capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         return capabilities;
     }
 
